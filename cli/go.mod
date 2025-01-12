@@ -1,6 +1,6 @@
 module github.com/mikeyfennelly/mpod/cli
 
-go 1.18
+go 1.21
 
 require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect

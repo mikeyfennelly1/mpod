@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"flag"
 	"fmt"
 	"os"
 )
@@ -21,52 +22,9 @@ func main() {
 		errors.New("Please provide some arguments\n")
 		return
 	}
-	// detect what the command was
-	// if the command is a valid command, pass it to the relevant handler function for that command
-	// if the command is invalid, raise an error based on the type of misuse
-	command, _ := createCommand(os.Args)
-	command.run()
-}
+	var containerName string
+	flag.StringVar(&containerName, "name", "undefined", "Name of the container you want to start.")
 
-func isValidIndex(slice []string, index int) bool {
-	return index >= 0 && index < len(slice)
-}
-
-func createCommand(programArgs []string) (command, error) {
-	switch programArgs[1] {
-	case "start":
-		// start has non-mandatory flag of '--name'
-		if isValidIndex(programArgs, 2) {
-			if programArgs[2] != "--name" {
-
-			}
-		}
-		// check for validity of start command logic
-		thisStartCommand := command{
-			use:          programArgs[0],
-			argsAndFlags: []string{},
-			short:        "scrapShort",
-			long:         "scrapLong",
-			run: func() {
-				fmt.Println("scrapPrint")
-			},
-		}
-		return thisStartCommand, nil
-	case "stop":
-		// check for validity of stop command logic
-		thisStopCommand := command{
-			use:          programArgs[0],
-			argsAndFlags: []string{},
-			short:        "scrapShort",
-			long:         "scrapLong",
-			run: func() {
-				fmt.Println("scrapPrint")
-			},
-		}
-		return thisStopCommand, nil
-	default:
-		err := errors.New("this is the default err")
-
-		return command{}, err
-	}
+	flag.Parse()
+	fmt.Println(containerName)
 }

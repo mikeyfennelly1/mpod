@@ -1,4 +1,4 @@
-package main
+package core
 
 import (
 	"fmt"
@@ -46,10 +46,10 @@ func child() {
 	cmd.Stderr = os.Stderr
 
 	cmd.Run()
-	cg()
+	createControlGroup()
 }
 
-func cg() {
+func createControlGroup() {
 	cgroups := "/sys/fs/cgroup/"
 	pids := filepath.Join(cgroups, "pids")
 	os.Mkdir(filepath.Join(pids, "mfennelly"), 0755)
