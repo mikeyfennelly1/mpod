@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# add all files to staging area
+git add --all
+
+# commit files with commit message
+git commit -m "$1"
+
+# push existing local commits
+git push origin main
+
 # remove tag locally
 git tag -d v0.0.7
 # remove tag on remote
