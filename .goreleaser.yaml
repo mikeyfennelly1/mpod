@@ -14,13 +14,35 @@ before:
     - go mod tidy
 
 builds:
-  - main: /mpod
-  - env:
+  - id: mpod-linux
+    main: ./mpod
+    env:
       - CGO_ENABLED=0
     goos:
       - linux
+    goarch:
+      - amd64
+      - arm64
+
+  - id: mpod-windows
+    main: ./mpod
+    env:
+      - CGO_ENABLED=0
+    goos:
       - windows
+    goarch:
+      - amd64
+      - 386
+
+  - id: mpod-darwin
+    main: ./mpod
+    env:
+      - CGO_ENABLED=0
+    goos:
       - darwin
+    goarch:
+      - amd64
+      - arm64
 
 archives:
   - format: tar.gz
