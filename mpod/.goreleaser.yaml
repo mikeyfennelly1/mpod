@@ -23,6 +23,7 @@ builds:
     goarch:
       - amd64
       - arm64
+    ldflags: "-X main.MPOD_VERSION=$(git describe --tags --abbrev=0)"
 
   - id: mpod-windows
     main: ./main.go
@@ -33,6 +34,7 @@ builds:
     goarch:
       - amd64
       - 386
+    ldflags: "-X main.MPOD_VERSION=$(git describe --tags --abbrev=0)"
 
   - id: mpod-darwin
     main: ./main.go
@@ -43,6 +45,7 @@ builds:
     goarch:
       - amd64
       - arm64
+    ldflags: "-X main.MPOD_VERSION=$(git describe --tags --abbrev=0)"
 
 archives:
   - format: tar.gz

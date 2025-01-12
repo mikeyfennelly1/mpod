@@ -5,7 +5,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-const MPOD_VERSION = "0.0.1"
+const MPOD_VERSION = "dev"
 
 func main() {
 	var rootCmd = &cobra.Command{
