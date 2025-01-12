@@ -25,7 +25,7 @@ func InvalidArg(command string, invalidArg string) CLIErr {
 	return InvalidArgumentError
 }
 
-// A flag can be thought of as 'an argument to an argument'
+// A flag can be thought of as 'an argument to an argument' where the flag is preceded by '--'
 // e.g 'mpod start --name "my-container"' where '--name' is the flag
 func InvalidFlag(argument string, invalidFlag string) CLIErr {
 	var messageSB strings.Builder
