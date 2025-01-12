@@ -4,3 +4,6 @@
 _mpod_ is a rootless container tool that I have used as an exercise to learn some of the ins and outs of Linux.
 
 More docs coming in the future...
+
+== Installation
+
