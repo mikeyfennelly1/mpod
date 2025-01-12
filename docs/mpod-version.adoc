@@ -1,13 +1,13 @@
-# NAME
+= NAME
 mpod-version - display version of mpod
 
-## SYNOPSIS
+== SYNOPSIS
 mpod version
 
-## DESCRIPTION
+== DESCRIPTION
 Print version of mpod
 
-## OPTIONS
+== OPTIONS
 --help, -h
 
 Print usage message
