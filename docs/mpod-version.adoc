@@ -1,0 +1,13 @@
+# NAME
+mpod-version - display version of mpod
+
+## SYNOPSIS
+mpod version
+
+## DESCRIPTION
+Print version of mpod
+
+## OPTIONS
+--help, -h
+
+Print usage message
