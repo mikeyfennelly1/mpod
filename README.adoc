@@ -1,9 +1,10 @@
 = mpod
 :toc:
 
-_mpod_ is a rootless container tool that I have used as an exercise to learn some of the ins and outs of Linux.
+== Notice about pause in development
 
-More docs coming in the future...
+mpod is intended to be a container engine that will eventually run on top of mrun. mrun is currently under devleopment, and is close to a second, more comprehensive version, which will account for Linux security modules, advanced cgroup features, and a generally more modular - chained initialization architecture.
 
-== Installation
+Check out link:https://github.com/mikeyfennelly1/mrun/tree/init-chain[mrun] for the current state of mrun.
 
+More coming soon...
